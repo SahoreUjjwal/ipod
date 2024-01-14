@@ -3,7 +3,7 @@
     width:200px;
     height:200px;
     background-color: gainsboro;
-    top:40dvh;
+    top:20dvh;
     left:45dvw;
     
 }
@@ -59,4 +59,10 @@
 .ipod-screen{
   width:40dvh;
   aspect-ratio:1/1;
+}
+.highlight{
+  background-color: aqua;
+}
+body *{
+  draggable :none;
 }
