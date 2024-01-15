@@ -1,5 +1,9 @@
 import { Component } from "react";
-
+import { AllSongs } from "./AllSongs";
+import { Games } from "./Games";
+import {Artists} from "./Artists";
+import  {Albums} from "./Albums";
+import { Settings } from "./Settings";
 export class List extends Component{
         
     render(){
@@ -8,14 +12,14 @@ export class List extends Component{
         <>
             {state.activePage==="Home"?(
                 <div>
-                    <ul>
+                    <ul style={{listStyleType:"none"}}>
                         {state.homeList.map((item,index)=>(
                             <li className={state.activeItem===item?"highlight":""} key={index}>{item}</li>
                         ))}
                     </ul>
                 </div>
             ):state.activePage==="Music"?(<div>
-                <ul>
+                <ul style={{listStyleType:"none"}}>
                     {state.musicMenu.map((item,index)=>(
                         <li className={state.activeItem===item?"highlight":""} key={index}>{item}</li>
                     ))}

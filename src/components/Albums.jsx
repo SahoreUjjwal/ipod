@@ -1,4 +1,4 @@
-export function AllSongs(){
+export function Albums(){
     return(
         <div>
             Albums

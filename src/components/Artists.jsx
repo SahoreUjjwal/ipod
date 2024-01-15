@@ -1,4 +1,4 @@
-export function AllSongs(){
+export function Artists(){
     return(
         <div>
             Artists

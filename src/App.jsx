@@ -122,21 +122,32 @@ export class App extends Component{
       }
       else if(this.state.activeItem==="Home")
       {
-        actItem="C";
+        actItem="Cover Flow";
       }
+      console.log(actviepage);
       this.setState({
         activePage:actviepage,
         activeItem:actItem
       })
   }
+  goBack(){
+      if(this.state.activePage==="Games"||this.state.activePage==="Music"||this.state.activePage==="Settings")
+        {
+          let activePage =this.state.activePage;
+          this.setState({
+            activePage:"Home",
+            activeItem:activePage
+          })
+        }
+  }
 
   render()
   {
       return (
-        <>
+        <div className="ipod-container">
           <Screen state={this.state}/>
-          <Controls onRotate={this.onRotate.bind(this)} onSelect={this.onSelect.bind(this)}/>
-        </>
+          <Controls onRotate={this.onRotate.bind(this)} onSelect={this.onSelect.bind(this)} goBack={this.goBack.bind(this)}/>
+        </div>
       )
   }
 }
